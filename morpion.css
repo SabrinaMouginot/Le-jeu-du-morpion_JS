@@ -67,3 +67,11 @@
     color: #498afb;
 
 }
+
+.controls{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1em;
+}
