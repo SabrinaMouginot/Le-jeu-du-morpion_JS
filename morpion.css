@@ -75,3 +75,13 @@
     align-items: center;
     margin-top: 1em;
 }
+
+.redemarrer{
+    background-color: #ff3860;
+    color: white;
+    padding: 8px;
+    border-radius: 8%;
+    border: none;
+    font-size: 20px;
+    margin-left: 1em;
+}
