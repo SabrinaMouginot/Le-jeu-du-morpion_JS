@@ -1,7 +1,12 @@
 addEventListener("DOMContentLoaded",  () => {
     const tiles = Array.from(document.querySelectorAll('.tile'));
-    const joueurDisplay =document.querySelector('.display-joueur');
-    const redemarrerButton = document.querySelector('.redemarrer')
+    const joueurAffiche =document.querySelector('.display-joueur');
+    const redemarrerButton = document.querySelector('.redemarrer');
+
+    let board = ['', '', '', '', '', '', '', '', ''];
+    let joueurActuel = 'X';
+    let isGameActive = true;
+
     redemarrerButton.addEventListener('click', redemarrerBoard);
 });
 
