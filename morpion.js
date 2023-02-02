@@ -2,8 +2,8 @@ addEventListener("DOMContentLoaded",  () => {
     //addEventListener gère des évènements.
     //Ici, l'événement DOMContentLoaded se déclenche lorsque tous les scripts ont été executés (il n'attend pas que le reste finisse de se charger).
     const tiles = Array.from(document.querySelectorAll('.tile'));
-    const joueurAffiche =document.querySelector('.display-joueur');
-    const redemarrerButton = document.querySelector('.redemarrer');
+    const joueurAffiche =document.querySelector('.display joueur');
+    const resetButton = document.querySelector('.reset');
 
     let board = ['', '', '', '', '', '', '', '', ''];
     let joueurActuel = 'X';
@@ -61,23 +61,23 @@ addEventListener("DOMContentLoaded",  () => {
     const annonce = (type) => {
         switch(type){
             case JOUEURO_GAGNE:
-                annonceur.innerHTML = 'joueur <span class="joueurO"> O</span> gagne';
+                annonceur.innerHTML = 'joueur <span class="joueurO"> O </span> gagne';
                 break;
             case JOUEURX_GAGNE:
-                annonceur.innerHTML = 'joueur <span class="joueurX"> X</span> gagne';
+                annonceur.innerHTML = 'joueur <span class="joueurX"> X </span> gagne';
                 break;
             case TIE:
                 annonceur.innerText = 'Tie'
         }
-        annonceur.classList.remove('hide');
+        annonceur.classList.remove('cache');
     };
     
 const isValidAction = (tile) => {
-    if (tile.innerText === 'X' || tile.innerText === 'o') {
+    if (tile.innerText === 'X' || tile.innerText === 'O') {
         return false;
     }
     return true;
-}
+};
 
     const updateBoard = (index) => {
         board[index] = joueurActuel;
@@ -91,7 +91,7 @@ const isValidAction = (tile) => {
     }
 
     const ActionUtilisateur = (tile, index) => {
-        if(isValidAction(tile)&& isGameActive) {
+        if(isValidAction(tile) && isGameActive) {
             tile.innerText = joueurActuel,
             tile.classList.add(`joueur${joueuractuel}`);
             updateBoard(index);
@@ -100,15 +100,15 @@ const isValidAction = (tile) => {
         }
     }
 
-    const grilleDemarrage = () => {
+    const resetBoard = () => {
         board = ['', '', '', '', '', '', '', '', '']
         isGameActive = true;
-        annonce.classList.add('hide');
+        annonce.classList.add('cache');
 
         if (joueurActuel === 'O') {
             changeJoueur();
         }
-        tiles.forEach(tilr => {
+        tiles.forEach(tile => {
             tile. innerText = '';
             tile.classList.remove('joueurX');
             tile.classList.remove('joueurO');
@@ -120,6 +120,6 @@ const isValidAction = (tile) => {
     
     });
          
-    redemarrerButton.addEventListener('click', redemarrerBoard);
+    resetButton.addEventListener('click', resetBoard);
 });
 

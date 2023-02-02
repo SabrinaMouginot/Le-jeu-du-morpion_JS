@@ -34,7 +34,7 @@
     margin-bottom: 1em;
 }
 
-.hide{
+.cache{
     display: none;
 }
 
@@ -62,7 +62,7 @@
     color: #09C372;
 }
 
-.joueur0{
+.joueurO{
     color: #498afb;
 }
 
@@ -74,7 +74,7 @@
     margin-top: 1em;
 }
 
-.redemarrer{
+.reset{
     background-color: #ff3860;
     color: white;
     padding: 8px;
