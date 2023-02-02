@@ -31,13 +31,20 @@ addEventListener("DOMContentLoaded",  () => {
         [2, 4, 6],
     ];
 
+    const changeJoueur = () => {
+        joueurDisplay.classList.remove(`player${joueurActuel}`);
+        joueurActuel = joueurActuel === 'X' ? 'O' :'X';
+        joueurDisplay.innerText = joueurActuel;
+        joueurDisplay.classList.add(`joueur${joueurActuel}`);
+    }
+
     const ActionUtilisateur = (tile, index) => {
         if(isValidAction(tile)&& isGameActive) {
             tile.innerText = joueurActuel,
             tile.classList.add(`joueur${joueuractuel}`);
             updateBoard(index);
             handleResultValidation();
-            changePlayer();
+            changeJoueur();
         }
     }
 
