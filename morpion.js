@@ -31,8 +31,25 @@ addEventListener("DOMContentLoaded",  () => {
         [2, 4, 6],
     ];
 
+
+    const annonce = (type) => {
+        switch(type){
+            case JOUEURO_GAGNE:
+                annonceur.innerHTML = 'joueur <span class="joueurO"> O</span> gagne';
+                break;
+            case JOUEURX_GAGNE:
+                annonceur.innerHTML = 'joueur <span class="joueurX"> X</span> gagne';
+                break;
+            case TIE:
+                annonceur.innerText = 'Tie'
+        }
+        annonceur.classList.remove('hide');
+    };
+    
+
+
     const changeJoueur = () => {
-        joueurDisplay.classList.remove(`player${joueurActuel}`);
+        joueurDisplay.classList.remove(`joueur${joueurActuel}`);
         joueurActuel = joueurActuel === 'X' ? 'O' :'X';
         joueurDisplay.innerText = joueurActuel;
         joueurDisplay.classList.add(`joueur${joueurActuel}`);
