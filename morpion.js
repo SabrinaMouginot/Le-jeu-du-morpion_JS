@@ -31,6 +31,32 @@ addEventListener("DOMContentLoaded",  () => {
         [2, 4, 6],
     ];
 
+    function handleResultValidation() {
+        let partieGagnee = false;
+        for (let i = 0; i <=7; i++) {
+            const conditionsGagnees =conditionsGagnantes [i];
+            const a = board[conditionsGagnees[0]];
+            const b = board[conditionsGagnees[1]];
+            const c = board[conditionsGagnees[2]];
+            if (a === '' || b === '' || c === '') {
+                continue;
+            }
+            if (a === b && b === c) {
+                partieGagnee = true;
+                break;
+            }
+        }
+
+    if (partieGagnee) {
+        annonce(joueurActuel === 'X' ? JOUEURX_GAGNE : JOUEURO_GAGNE);
+        isGameActive = false;
+        return;
+    }
+
+    if (!board.includes(''))
+        annonce(TIE);
+
+    }
 
     const annonce = (type) => {
         switch(type){
