@@ -72,7 +72,16 @@ addEventListener("DOMContentLoaded",  () => {
         annonceur.classList.remove('hide');
     };
     
+const isValidAction = (tile) => {
+    if (tile.innerText === 'X' || tile.innerText === 'o') {
+        return false;
+    }
+    return true;
+}
 
+    const updateBoard = (index) => {
+        board[index] = joueurActuel;
+    }
 
     const changeJoueur = () => {
         joueurDisplay.classList.remove(`joueur${joueurActuel}`);
@@ -89,6 +98,21 @@ addEventListener("DOMContentLoaded",  () => {
             handleResultValidation();
             changeJoueur();
         }
+    }
+
+    const grilleDemarrage = () => {
+        board = ['', '', '', '', '', '', '', '', '']
+        isGameActive = true;
+        annonce.classList.add('hide');
+
+        if (joueurActuel === 'O') {
+            changeJoueur();
+        }
+        tiles.forEach(tilr => {
+            tile. innerText = '';
+            tile.classList.remove('joueurX');
+            tile.classList.remove('joueurO');
+        });
     }
 
     tiles.forEach( (tile, index) => {
