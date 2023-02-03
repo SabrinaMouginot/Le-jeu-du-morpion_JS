@@ -1,4 +1,4 @@
-*{
+* {
     padding: 0;
     margin: 0;
     font-family: 'Itim', cursive;
@@ -10,7 +10,7 @@
     padding-top: 1px;
 }
 
-#title{
+.title{
     color: white;
     text-align: center;
     font-size: 40px;
@@ -25,20 +25,11 @@
     margin-bottom: 1em;
 }
 
-
-.display{
-    color: white;
-    font-size: 25px;
-    text-align: center;
-    margin-top: 1em;
-    margin-bottom: 1em;
-}
-
-.cache{
+.hide{
     display: none;
 }
 
-.container{
+.container {
     margin: 0 auto;
     display: grid;
     grid-template-columns: 33% 33% 33%;
@@ -46,24 +37,23 @@
     max-width: 300px;
 }
 
-.title{
+.tile {
     border: 1px solid white;
     min-width: 100px;
     min-height: 100px;
-    display: flex; 
+    display: flex;
     justify-content: center;
     align-items: center;
-    display: flex; 
     font-size: 50px;
     cursor: pointer;
 }
 
-.joueur{
+.playerX {
     color: #09C372;
 }
 
-.joueurO{
-    color: #498afb;
+.playerO {
+    color: #498AFB;
 }
 
 .controls{
@@ -74,11 +64,11 @@
     margin-top: 1em;
 }
 
-.reset{
-    background-color: #ff3860;
+#reset{
+    background-color: #FF3860;
     color: white;
     padding: 8px;
-    border-radius: 8%;
+    border-radius: 8px;
     border: none;
     font-size: 20px;
     margin-left: 1em;
