@@ -74,3 +74,17 @@
     margin-left: 1em;
     cursor: pointer;
 }
+
+/******************************************* ANIMATION ******************************************************/
+
+.img-fluid{
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    /* margin-left: 20%; */
+    padding: 0 70%;
+
+}
+ .AnimationImg {
+    display: inline-flex;  
+ }

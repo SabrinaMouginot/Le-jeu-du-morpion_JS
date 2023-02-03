@@ -1,4 +1,4 @@
-const Image = document.querySelector(".AnimationImg "); // pour stocker l'animation
+const Image = document.querySelector(".AnimationImg2"); // pour stocker l'animation
 Image.style.position = "absolute";      // Pour pouvoir la positionner exactement où on veut
 let topPosition = 100;
 let direction = -1;
@@ -19,3 +19,4 @@ function hautBas(){
 
 // J'appelle une animation. On appelle en Call Back la fonction hautBas.
 requestAnimationFrame(hautBas);
+
