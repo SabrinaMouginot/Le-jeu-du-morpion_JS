@@ -65,13 +65,13 @@ window.addEventListener('DOMContentLoaded',  () => {
     const announce = (type) => {
         switch(type){
             case PLAYERO_WON:
-                announcer.innerHTML = 'Player <span class="playerO"> O </span> won';
+                announcer.innerHTML = 'Le joueur <span class="playerO"> O </span> a gagné.';
                 break;
             case PLAYERX_WON:
-                announcer.innerHTML = 'Player <span class="playerX"> X </span> won';
+                announcer.innerHTML = 'Le joueur <span class="playerX"> X </span> a gagné.';
                 break;
             case TIE:
-                announcer.innerText = 'Tie'
+                announcer.innerText = 'Match nul'
         }
         announcer.classList.remove('hide');
     };
@@ -126,4 +126,5 @@ window.addEventListener('DOMContentLoaded',  () => {
          
     resetButton.addEventListener('click', resetBoard);
 });
+
 
